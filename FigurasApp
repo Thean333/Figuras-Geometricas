@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class figurasApp {
+	
+
+			
+		public static void main (String args[]){
+			Pantalla p1 = new Pantalla ();
+			Scanner scan = new Scanner(System.in);
+			int ladorec , ladotri , radio;
+			
+			System.out.println("ingrese el lado del cuadrado");
+			ladorec=scan.nextInt();
+			Cuadrado cuadrado= new Cuadrado("cuadrado",ladorec);
+			
+			
+			System.out.println("ingrese el lado del triangulo");
+			ladotri=scan.nextInt();
+			triangulo triangulo= new triangulo("triangulo",ladotri);
+			
+			
+			System.out.println("ingrese el radio del circulo");
+			radio=scan.nextInt();
+			circulo circulo= new circulo("circulo",radio);
+			
+			p1.Addfigura(cuadrado);
+			p1.Addfigura(triangulo);
+			p1.Addfigura(circulo);
+			
+			p1.CalcularAreas();
+			p1.CalcularPerimetros();
+			p1.imprimirAreas();
+			p1.imprimirPerimetros();
+			
+			
+		
+
+	}
+
+}
