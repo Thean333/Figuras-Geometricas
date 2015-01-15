@@ -1,0 +1,52 @@
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.*;
+import java.applet.Applet;
+
+public class Cuadrado extends figurasGeometricas{
+	private double lado;
+
+	public Cuadrado(String name, double lado) {
+		super(name);
+		this.lado=lado;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Cuadrado lado=" + lado + "\n";
+	}
+
+
+	public void area(){
+		setArea(lado*lado);
+	}
+	
+	@Override
+	public void perimetro() {
+		// TODO Auto-generated method stub
+		setPerimetro(lado*4);
+	}
+	
+	public void init() {
+        Dimension d = size();    // devuelve el tamaño del applet
+        lado = d.width;
+        lado = d.height;
+    
+        repaint();
+        }
+	
+	public void pintar(Graphics g){
+		
+		super.paint(g);
+		 g.setColor (Color.blue);
+		 g.drawRect (0, 10,(int)lado, (int)lado);
+		
+	}
+
+
+	
+
+}
