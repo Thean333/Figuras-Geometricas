@@ -1,0 +1,42 @@
+
+import java.util.ArrayList;
+
+public class Pantalla {
+	ArrayList<figurasGeometricas>figuras;
+	
+	public Pantalla(){
+		figuras = new ArrayList<figurasGeometricas> ();
+	}
+	
+	public void Addfigura(figurasGeometricas aux){
+		figuras.add(aux);
+	}
+	
+	public void CalcularAreas(){
+		for(figurasGeometricas aux : figuras){
+			aux.area();
+		}
+	}
+	
+	public void CalcularPerimetros(){
+		for(figurasGeometricas aux : figuras){
+			aux.perimetro();
+		}
+	}
+	
+	public void imprimirAreas(){
+		System.out.println("AREAS:");
+		for(figurasGeometricas aux : figuras){
+			System.out.println(aux +""+ aux.getArea());
+		}
+	}
+	
+	public void imprimirPerimetros(){
+		System.out.println("PERIMETROS:");
+		for(figurasGeometricas aux : figuras){
+			System.out.println(aux +""+ aux.getPerimetro());
+		}
+	}
+	
+
+}
