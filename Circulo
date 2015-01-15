@@ -1,0 +1,49 @@
+
+import java.awt.Graphics;
+
+public class circulo extends figurasGeometricas {
+	private double radio;
+
+	public circulo(String name, double radio) {
+		super(name);
+		this.radio=radio;
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void area() {
+		// TODO Auto-generated method stub
+		setArea(radio*3.1415*radio);
+	}
+
+
+	@Override
+	public void perimetro() {
+		// TODO Auto-generated method stub
+		setPerimetro(radio*2*3.1415);
+	}
+	
+	@Override
+	public String toString() {
+		return "circulo radio=" + radio + "\n";
+	}
+
+	public void pintar(Graphics g){
+	 g.drawOval (350, 70, 50, 70);
+	}
+
+	public static void area (int radio){
+		double area;
+		area=Math.PI*(radio*radio);
+		System.out.println(area);
+	}
+	
+	public static void perimetro (int radio){
+		double perimetro;
+		perimetro=Math.PI*2*radio;
+		System.out.println(perimetro);
+	}
+
+
+	
+}
